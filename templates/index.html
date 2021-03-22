@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HR Platform</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style9.css') }}">
+  
+</head>
+
+<style>
+    body, html {
+    
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display:table;
+    }
+
+    body {
+        display:table-cell;
+        vertical-align:middle;
+    }
+
+
+    .login { 
+	width: 30%;
+	display:table;/* shrinks to fit conntent */
+	margin:auto;
+    }
+
+    #drop {
+		/* height: 50%; */
+		font-weight: bold;
+		text-align: center;
+		padding: 5em 5em;
+		/* margin: 1em 1em; */
+		color: #555;
+		border: 2px dashed #555;
+		border-radius: 7px;
+		cursor: default;
+  	}
+
+
+   
+</style>
+<body style='background: black;'>
+ <div class="login">
+	<h1>HR Promotion</h1>
+   
+        <form action="/" method="post" id="drop">
+    	 
+            <input type="text" name="employee_id" placeholder="Employee ID" required="required" />
+            
+            <label for="department">Department</label>
+                <select id="department" name="department">
+                    <option value="Sales & Marketing">Sales & Marketing</option>
+                    <option value="Operations">Operations</option>
+                    <option value="Procurement">Procurement</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Analytics">Analytics</option>
+                    <option value="Finance">Finance</option>
+                    <option value="HR">HR</option>
+                    <option value="Legal">Legal</option>
+                    <option value="R&D">R&D</option>
+                </select>
+            <br>
+
+            <label for="region">Region</label>
+                <select id="region" name="region">
+                    <option value="region_1">Region 1</option>
+                    <option value="region_2">Region 2</option>
+                    <option value="region_3">Region 3</option>
+                    <option value="region_4">Region 4</option>
+                    <option value="region_5">Region 5</option>
+                    <option value="region_6">Region 6</option>
+                    <option value="region_7">Region 7</option>
+                    <option value="region_8">Region 8</option>
+                    <option value="region_9">Region 9</option>
+                    <option value="region_10">Region 10</option>
+                    <option value="region_11">Region 11</option>
+                    <option value="region_12">Region 12</option>
+                    <option value="region_13">Region 13</option>
+                    <option value="region_14">Region 14</option>
+                    <option value="region_15">Region 15</option>
+                    <option value="region_16">Region 16</option>
+                    <option value="region_17">Region 17</option>
+                    <option value="region_18">Region 18</option>
+                    <option value="region_19">Region 19</option>
+                    <option value="region_20">Region 20</option>
+                    <option value="region_21">Region 21</option>
+                    <option value="region_22">Region 22</option>
+                    <option value="region_23">Region 23</option>
+                    <option value="region_24">Region 24</option>
+                    <option value="region_25">Region 25</option>
+                    <option value="region_26">Region 26</option>
+                    <option value="region_27">Region 27</option>
+                    <option value="region_28">Region 28</option>
+                    <option value="region_29">Region 29</option>
+                    <option value="region_30">Region 30</option>
+                    <option value="region_31">Region 31</option>
+                    <option value="region_32">Region 32</option>
+                    <option value="region_33">Region 33</option>
+                    <option value="region_34">Region 34</option>
+                </select>
+            <br>
+
+            <label for="education">Education</label>
+                <select id="education" name="education">
+                    <option value="Below Secondary">Below Secondary</option>
+                    <option value="Bachelor's">Bachelor's</option>
+                    <option value="Master's & above">Master's & above</option>
+                </select>
+            <br>
+
+            <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                </select>
+            <br>
+
+            <label for="recruitment_channel">Recuitment</label>
+                <select id="recruitment_channel" name="recruitment_channel">
+                    <option value="sourcing">Sourcing</option>
+                    <option value="referred">Referred</option>
+                    <option value="other">Other</option>
+                </select>
+            <br>
+
+            <input type="text" name="no_of_trainings" placeholder="Number of trainings" required="required" />
+            <input type="text" name="age" placeholder="Age" required="required" />
+            <input type="text" name="prev_year_rating" placeholder="Previous year rating" required="required" />
+            <input type="text" name="length_of_service" placeholder="Length of service" required="required" />
+            <input type="text" name="awards_won" placeholder="Awards Won" required="required" />
+            <input type="text" name="avg_training_score" placeholder="Average Training Score" required="required" />
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+
+    
+
+   <br>
+   <br>
+   {{ prediction_text }}
+ </div>
+</body>
+</html>

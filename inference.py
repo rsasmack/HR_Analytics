@@ -17,7 +17,7 @@ def load_files():
     education= {"Below Secondary":0,"Bachelor's":1,"Master's & above":2}
 
     ss= pkl.load(open('weights/standardScaler.pkl','rb'))
-    model = pkl.load(open('vot2_hr.pklz', 'rb'))
+    model = pkl.load(open('vot2.pkl', 'rb'))
 
     return department, region, education, ss, model
     

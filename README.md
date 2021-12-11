@@ -6,6 +6,4 @@ HR analytics is a methodology for creating insights on how investments in human 
 
 **Outcome**: To solve the classification problem, several models were applied. The prediction of model with 93% was achieved thereby helping the employees for reaching their goals as well as objectives of the organization.
 
-**Key skills:** Exploratory data analysis, Classification models (Logistic Regression, Decision Tree, Naïve Bayes), Ensemble models
-
 ![Deployment Result](https://user-images.githubusercontent.com/68693473/145669455-ee4b43f8-f734-4505-aa94-5ed779a90453.PNG)
